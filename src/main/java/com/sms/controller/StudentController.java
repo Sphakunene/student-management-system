@@ -25,7 +25,14 @@ public class StudentController {
 
 	@GetMapping("/students")
 	public String listStudents(Model model) {
-		model.addAttribute("students",studentServices.getAllStudents());
+	//	model.addAttribute("students",studentServices.getAllStudents());
 		return "students";
 	}
+	
+	@GetMapping("/students/new")
+	public String createStudentForm(Model model) {
+		
+		Student student = new Student();
+	}
+	
 }
