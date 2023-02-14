@@ -29,6 +29,24 @@ public class StudentServicesImp implements StudentServices {
 		// TODO Auto-generated method stub
 		return studentRepository.save(student);
 	}
+
+	@Override
+	public Student getStudentbyId(Long id) {
+		
+		return studentRepository.findById(id).get();
+	}
+
+	@Override
+	public Student updateStudent(Student student) {
+	
+		return studentRepository.save(student);
+	}
+
+	@Override
+	public void deleteById(long id) {
+		studentRepository.deleteById(id);
+		
+	}
 	
 
 }
