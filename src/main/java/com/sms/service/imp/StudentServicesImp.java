@@ -24,4 +24,11 @@ public class StudentServicesImp implements StudentServices {
 		return studentRepository.findAll();
 	}
 
+	@Override
+	public Student saveStudent(Student student) {
+		// TODO Auto-generated method stub
+		return studentRepository.save(student);
+	}
+	
+
 }
